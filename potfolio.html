@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kush Karki — Backend & DevOps Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="potfolio.css">
+</head>
+<body>
+
+
+<div id="progress"></div>
+ 
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="wrap navrow">
+    <a href="#home" class="logo"><span class="dot"></span>kush.karki</a>
+    <ul class="navlinks" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#articles">Articles</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="navactions">
+      <button class="icon-btn" id="themeToggle" title="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+      <button class="icon-btn hamburger" id="hamburger" title="Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+ 
+<header class="hero" id="home">
+  <div class="wrap">
+    <div class="cover">
+      <img class="cover-img" src="img/cover.jpg" alt="Cover banner">
+      <div class="cover-overlay"></div>
+      <div class="grid-overlay"></div>
+      <div class="code-float">def deploy(service):&nbsp;&nbsp;<br>&nbsp;&nbsp;build() -&gt; test()<br>&nbsp;&nbsp;push() -&gt; release()<br># status: healthy ✓</div>
+    </div>
+    <div class="profile-block">
+      <img class="avatar" src="img/profile.png" alt="Kush Karki">
+      <div class="profile-info">
+        <br><br>
+        <h1>Kush Karki</h1>
+        <p class="headline">Software Developer <span class="sep">·</span> Full-Stack Developer <span class="sep">·</span> AI/ML Enthusiast <span class="sep">·</span> Cloud &amp; Systems Engineer</p>
+        <div class="locline">
+          <span><i class="fa-solid fa-location-dot"></i> Kathmandu, Bagmati, Nepal</span>
+          <span><i class="fa-solid fa-envelope"></i> hello@kushkarki.dev</span>
+          <span><i class="fa-brands fa-github"></i> github.com/kushkarki-okd</span>
+        </div>
+      </div>
+    </div>
+    <div class="stackbar reveal">
+      <div class="badges">
+        <span class="badge"><i class="fa-brands fa-python"></i>Python</span>
+        <span class="badge"><i class="fa-solid fa-layer-group"></i>Django</span>
+        <span class="badge"><i class="fa-brands fa-aws"></i>AWS</span>
+        <span class="badge"><i class="fa-brands fa-docker"></i>Docker</span>
+        <span class="badge"><i class="fa-solid fa-brain"></i>AI/ML</span>
+        <span class="badge"><i class="fa-brands fa-html5"></i>HTML</span>
+        <span class="badge"><i class="fa-brands fa-css3-alt"></i>CSS</span>
+        <span class="badge"><i class="fa-solid fa-wind"></i>Tailwind CSS</span>
+        <span class="badge"><i class="fa-brands fa-php"></i>PHP</span>
+        <span class="badge"><i class="fa-brands fa-java"></i>Java</span>
+        <span class="badge"><i class="fa-solid fa-c"></i>C</span>
+        <span class="badge"><i class="fa-solid fa-plus"></i>C++</span>
+        <span class="badge"><i class="fa-solid fa-bolt"></i>Redis</span>
+        <span class="badge"><i class="fa-solid fa-database"></i>PostgreSQL</span>
+        <span class="badge"><i class="fa-solid fa-diagram-project"></i>RabbitMQ</span>
+        <span class="badge"><i class="fa-solid fa-database"></i>MySQL</span>
+        <span class="badge"><i class="fa-brands fa-linux"></i>Linux</span>
+        <span class="badge"><i class="fa-brands fa-git-alt"></i>Git</span>
+      </div>
+    </div>
+  </div>
+</header>
+ 
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+     
+      <h2>About Me</h2>
+      <p>A quick read on who I am and what I build.</p>
+    </div>
+    <div class="card about-card reveal">
+      <div class="about-text">
+        <p>I'm a backend-leaning full-stack developer based in Kathmandu, working mostly in Python and Django, with a growing focus on cloud infrastructure and systems design. I like building things that stay up at 3am — clean APIs, sane deployments, and services that fail gracefully.</p>
+        <p>Most of my recent work sits at the intersection of application development and DevOps: shipping Django services, then wiring the AWS side — EC2, S3, IAM, load balancers — so the thing I built actually survives production traffic.</p>
+        <div class="more-content" id="moreAbout">
+          <p>I'm also curious about AI/ML and where it fits into everyday product work, not just research demos. Outside of shipping code, I enjoy breaking down technical concepts for other people — writing docs, mentoring juniors, and occasionally speaking at local meetups.</p>
+          <p>Longer term, I'm drawn to the startup side of things: small teams, fast iteration, and owning a product end-to-end — from the database schema to the deploy pipeline.</p>
+        </div>
+        <button class="readmore" id="readMoreBtn">Read more <i class="fa-solid fa-chevron-down"></i></button>
+      </div>
+      <div class="focus-list">
+        <div class="focus-item"><i class="fa-solid fa-server"></i><div><h4>Backend &amp; Systems</h4><p>Django services, API design, database architecture.</p></div></div>
+        <div class="focus-item"><i class="fa-brands fa-aws"></i><div><h4>Cloud Infrastructure</h4><p>AWS, Docker, CI/CD, deployment pipelines.</p></div></div>
+        <div class="focus-item"><i class="fa-solid fa-brain"></i><div><h4>AI / ML</h4><p>Applied ML, model integration into products.</p></div></div>
+        <div class="focus-item"><i class="fa-solid fa-chalkboard-user"></i><div><h4>Teaching</h4><p>Writing docs and mentoring on backend &amp; cloud topics.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section alt" id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="prompt">02</span> — Work</span>
+      <h2>Featured Projects</h2>
+      <p>A selection of things I've designed, built, and shipped.</p>
+    </div>
+    <div class="filter-row reveal">
+      <button class="filter-pill active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="django">Django</button>
+      <button class="filter-pill" data-filter="aws">AWS</button>
+      <button class="filter-pill" data-filter="ai">AI/ML</button>
+      <button class="filter-pill" data-filter="docker">Docker</button>
+    </div>
+    <div class="grid-3" id="projectGrid">
+
+      <div class="card proj-card reveal" data-tags="django aws docker">
+        <div class="proj-thumb"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=60" alt="Multi-tenant SaaS platform"></div>
+        <div class="proj-body">
+          <h3>Multi-Tenant SaaS Starter</h3>
+          <p>A schema-per-tenant Django boilerplate with isolated databases, tenant-aware auth, and one-command provisioning.</p>
+          <div class="tech-row">
+            <span class="tech-chip">Python</span><span class="tech-chip">Django</span><span class="tech-chip">PostgreSQL</span><span class="tech-chip">Docker</span>
+          </div>
+          <div class="proj-actions">
+            <a class="btn btn-primary btn-sm" href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            <a class="btn btn-ghost btn-sm" href="#"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card proj-card reveal" data-tags="aws docker">
+        <div class="proj-thumb"><img src="https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=600&q=60" alt="Cloud infrastructure dashboard"></div>
+        <div class="proj-body">
+          <h3>Infra-as-Code Toolkit</h3>
+          <p>Reusable Terraform + Docker modules for spinning up VPC, EC2, S3, and CloudFront on AWS in minutes.</p>
+          <div class="tech-row">
+            <span class="tech-chip">AWS</span><span class="tech-chip">Docker</span><span class="tech-chip">Terraform</span><span class="tech-chip">Linux</span>
+          </div>
+          <div class="proj-actions">
+            <a class="btn btn-primary btn-sm" href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            <a class="btn btn-ghost btn-sm" href="#"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card proj-card reveal" data-tags="ai django">
+        <div class="proj-thumb"><img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600&q=60" alt="AI resume screening tool"></div>
+        <div class="proj-body">
+          <h3>Resume Screener API</h3>
+          <p>A Django + ML service that ranks incoming resumes against a job description using embeddings.</p>
+          <div class="tech-row">
+            <span class="tech-chip">Python</span><span class="tech-chip">Django REST</span><span class="tech-chip">scikit-learn</span>
+          </div>
+          <div class="proj-actions">
+            <a class="btn btn-primary btn-sm" href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            <a class="btn btn-ghost btn-sm" href="#"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card proj-card reveal" data-tags="django">
+        <div class="proj-thumb"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=60" alt="Real-time chat application"></div>
+        <div class="proj-body">
+          <h3>RabbitQueue Chat</h3>
+          <p>Real-time messaging app using Django Channels and RabbitMQ for reliable event delivery at scale.</p>
+          <div class="tech-row">
+            <span class="tech-chip">Django</span><span class="tech-chip">RabbitMQ</span><span class="tech-chip">Redis</span>
+          </div>
+          <div class="proj-actions">
+            <a class="btn btn-primary btn-sm" href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            <a class="btn btn-ghost btn-sm" href="#"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card proj-card reveal" data-tags="docker aws">
+        <div class="proj-thumb"><img src="https://images.unsplash.com/photo-1526379879527-8559ecfcaec0?auto=format&fit=crop&w=600&q=60" alt="CI/CD pipeline visualization"></div>
+        <div class="proj-body">
+          <h3>Zero-Downtime CI/CD</h3>
+          <p>A GitHub Actions pipeline that builds, tests, and rolls out Dockerized services to EC2 behind an ALB.</p>
+          <div class="tech-row">
+            <span class="tech-chip">GitHub Actions</span><span class="tech-chip">Docker</span><span class="tech-chip">AWS ALB</span>
+          </div>
+          <div class="proj-actions">
+            <a class="btn btn-primary btn-sm" href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            <a class="btn btn-ghost btn-sm" href="#"><i class="fa-brands fa-github"></i> Code</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS & ACTIVITIES -->
+<section class="section" id="events">
+  <div class="wrap">
+    <div class="section-head reveal">
+      
+      <h2>Events &amp; Activities</h2>
+      <p>Competition, pannel-discussion, and workshops I've taken part in.</p>
+    </div>
+    <div class="grid-2">
+ 
+      <div class="card event-card reveal" onclick="openModal(this)"
+        data-title="IT Quiz Competition — 1st Position"
+        data-meta="2026 · Dhulikhel, Nepal"
+        data-img="img/it quize.png"
+        data-desc="Honored to secure 1st Position in the IT Quiz Competition held at Kathmandu University (Dhulikhel).">
+        <div class="event-img"><img src="img/it quize.png" alt="IT Quiz Competition"><span class="event-tag">Competition</span></div>
+        <div class="event-body">
+          <div class="event-meta"><span><i class="fa-regular fa-calendar"></i> 2026</span><span><i class="fa-solid fa-location-dot"></i> Dhulikhel, Nepal</span></div>
+          <h3>IT-Quiz</h3>
+          <p>Honored to secure 1st Position 🥇 in the IT Quiz Competition held at Kathmandu University (Dhulikhel).</p>
+        </div>
+      </div>
+ 
+      <div class="card event-card reveal" onclick="openModal(this)"
+        data-title="AI &amp; ML Bootcamp"
+        data-meta="2025 · Kathmandu, Maitidevi, Nepal"
+        data-img="img/ai.png"
+        data-desc="Got a chance to participate in an outstanding 3-day AI bootcamp. This session was truly inspiring and productive.">
+        <div class="event-img"><img src="img/ai.png" alt="AI and ML bootcamp"><span class="event-tag">Workshop</span></div>
+        <div class="event-body">
+          <div class="event-meta"><span><i class="fa-regular fa-calendar"></i> 2025</span><span><i class="fa-solid fa-location-dot"></i> Kathmandu, Maitidevi, Nepal</span></div>
+          <h3>AI &amp; ML</h3>
+          <p>I got a chance to participate in an outstanding 3-day AI bootcamp. This session was truly inspiring and productive.</p>
+        </div>
+      </div>
+ 
+      <div class="card event-card reveal" onclick="openModal(this)"
+        data-title="Tegg Nas IT Expo 2025"
+        data-meta="2025 · Lalitpur, Nepal"
+        data-img="img/nas-it.png"
+        data-desc="From AI-powered health-tech solutions to cutting-edge SaaS products, the level of creativity and problem-solving on display was beyond what I had imagined. I truly felt the real power of AI and technology shaping our future.">
+        <div class="event-img"><img src="img/nas-it.png" alt="Tegg Nas IT Expo"><span class="event-tag">Event</span></div>
+        <div class="event-body">
+          <div class="event-meta"><span><i class="fa-regular fa-calendar"></i> 2025</span><span><i class="fa-solid fa-location-dot"></i> Lalitpur, Nepal</span></div>
+          <h3>Tegg Nas IT Expo 2025</h3>
+          <p>From AI-powered health-tech solutions to cutting-edge SaaS products, the level of creativity and problem-solving on display was beyond what I had imagined.</p>
+        </div>
+      </div>
+ 
+      <div class="card event-card reveal" onclick="openModal(this)"
+        data-title="Youbahub — Organizer"
+        data-meta="2025 — present · Kathmandu, Nepal"
+        data-img="img/pannel discussion.jpg"
+        data-desc="This panel discussion was outstanding and motivating, and the workshop related to DevOps and cloud was amazing — got a chance to participate and learn a lot about cloud and DevOps.">
+        <div class="event-img"><img src="img/pannel discussion.jpg" alt="Panel discussion"><span class="event-tag">Panel Discussion</span></div>
+        <div class="event-body">
+          <div class="event-meta"><span><i class="fa-regular fa-calendar"></i> 2025 — present</span><span><i class="fa-solid fa-location-dot"></i> Kathmandu, Nepal</span></div>
+          <h3>Youbahub — Organizer</h3>
+          <p>This panel discussion was outstanding and motivating, and the workshop related to DevOps and cloud was amazing — got a chance to participate and learn a lot about cloud and DevOps.</p>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+</section>
+ 
+
+<!-- ARTICLES -->
+<section class="section alt" id="articles">
+  <div class="wrap">
+    <div class="section-head reveal">
+      
+      <h2>Articles &amp; Publications</h2>
+      <p>Notes on Django, backend systems, and AWS cloud infrastructure.</p>
+    </div>
+ 
+    <div class="articles-wrap reveal">
+ 
+  
+      <!-- Django & Backend -->
+      <div class="article-group">
+        <h3 class="group-title"><i class="fa-brands fa-python"></i> Django &amp; Backend</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Article</th><th>Description</th><th></th></tr></thead>
+            <tbody>
+              <tr>
+                <td data-label="Article"><span class="art-title"><i class="fa-regular fa-file-lines"></i>Two-Phase Locking (2PL)</span></td>
+                <td data-label="Description">Deep dive into database concurrency control &amp; transaction locking</td>
+                <td data-label="Read"><a class="read-link" href="https://www.notion.so/2PL-Two-phase-locking-23ba7493c9f780a8bc34c3fa4cb63b02?source=copy_link" target="_blank" rel="noopener">Read <i class="fa-solid fa-arrow-right"></i></a></td>
+              </tr>
+              <tr>
+                <td data-label="Article"><span class="art-title"><i class="fa-regular fa-file-lines"></i>Django Channels</span></td>
+                <td data-label="Description">WebSocket &amp; real-time communication with Django Channels</td>
+                <td data-label="Read"><a class="read-link" href="https://www.notion.so/The-power-of-Django-channels-25aa7493c9f78072b196d1c9be2383e1?source=copy_link" target="_blank" rel="noopener">Read <i class="fa-solid fa-arrow-right"></i></a></td>
+              </tr>
+              <tr>
+                <td data-label="Article"><span class="art-title"><i class="fa-regular fa-file-lines"></i>Django Tenants</span></td>
+                <td data-label="Description">Multi-tenancy architecture with <code>django-tenants</code></td>
+                <td data-label="Read"><a class="read-link" href="https://www.notion.so/Django-Tenant-223a7493c9f780899877cd62363c7fa8?source=copy_link" target="_blank" rel="noopener">Read <i class="fa-solid fa-arrow-right"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+ 
+      <!-- AWS & Cloud Infrastructure -->
+      <div class="article-group">
+        <h3 class="group-title"><i class="fa-solid fa-cloud"></i> AWS &amp; Cloud Infrastructure</h3>
+ 
+        <div class="article-subgroup">
+          <h4 class="subgroup-title">Foundations</h4>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Article</th><th>Description</th><th></th></tr></thead>
+              <tbody>
+                <tr>
+                  <td data-label="Article"><span class="art-title"><i class="fa-regular fa-file-lines"></i>IAM</span></td>
+                  <td data-label="Description">Identity &amp; Access Management — users, roles, policies</td>
+                  <td data-label="Read"><a class="read-link" href="https://www.notion.so/IAM-Identity-and-Access-Management-274a7493c9f7804ab8f0ff2b51c6ea73?source=copy_link" target="_blank" rel="noopener">Read <i class="fa-solid fa-arrow-right"></i></a></td>
+                </tr>
+                <tr>
+                  <td data-label="Article"><span class="art-title"><i class="fa-regular fa-file-lines"></i>EC2</span></td>
+                  <td data-label="Description">Elastic Compute Cloud — virtual servers on AWS</td>
+                  <td data-label="Read"><a class="read-link" href="https://www.notion.so/EC2-Elastic-Compute-Cloud-271a7493c9f78019b25bc971982e0f91?source=copy_link" target="_blank" rel="noopener">Read <i class="fa-solid fa-arrow-right"></i></a></td>
+                </tr>
+                <tr>
+                  <td data-label="Article"><span class="art-title"><i class="fa-regular fa-file-lines"></i>EBS</span></td>
+                  <td data-label="Description">Elastic Block Store — persistent block storage for EC2</td>
+                  <td data-label="Read"><a class="read-link" href="https://www.notion.so/EBS-Elastic-Block-Store-27aa7493c9f780b99d85f919c8c36994?source=copy_link" target="_blank" rel="noopener">Read <i class="fa-solid fa-arrow-right"></i></a></td>
+                </tr>
+                <tr>
+                  <td data-label="Article"><span class="art-title"><i class="fa-regular fa-file-lines"></i>AMI</span></td>
+                  <td data-label="Description">Amazon Machine Images — creating &amp; managing EC2 snapshots</td>
+                  <td data-label="Read"><a class="read-link" href="https://www.notion.so/AMI-Amazon-Machine-Image-27aa7493c9f780b8a70de55273ef0093?source=copy_link" target="_blank" rel="noopener">Read <i class="fa-solid fa-arrow-right"></i></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+ 
+        <div class="article-subgroup">
+          <h4 class="subgroup-title">Storage &amp; CDN</h4>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Article</th><th>Description</th><th></th></tr></thead>
+              <tbody>
+                <tr>
+                  <td data-label="Article"><span class="art-title"><i class="fa-regular fa-file-lines"></i>Amazon S3</span></td>
+                  <td data-label="Description">Simple Storage Service — object storage fundamentals</td>
+                  <td data-label="Read"><a class="read-link" href="https://www.notion.so/Amazon-s3-Simple-Storage-Service-27da7493c9f780e3abf2e60d5ad87d87?source=copy_link" target="_blank" rel="noopener">Read <i class="fa-solid fa-arrow-right"></i></a></td>
+                </tr>
+                <tr>
+                  <td data-label="Article"><span class="art-title"><i class="fa-regular fa-file-lines"></i>S3 Versioning</span></td>
+                  <td data-label="Description">Managing object versions and preventing accidental deletion</td>
+                  <td data-label="Read"><a class="read-link" href="https://www.notion.so/Aws-s3-versioning-29ba7493c9f780c5b75fdf0fc45617e0?source=copy_link" target="_blank" rel="noopener">Read <i class="fa-solid fa-arrow-right"></i></a></td>
+                </tr>
+                <tr>
+                  <td data-label="Article"><span class="art-title"><i class="fa-regular fa-file-lines"></i>S3 Replication &amp; Logging</span></td>
+                  <td data-label="Description">Cross-region replication &amp; access logging strategies</td>
+                  <td data-label="Read"><a class="read-link" href="https://www.notion.so/S3-Replication-and-S3-logging-29ba7493c9f780749491c098973896e2?source=copy_link" target="_blank" rel="noopener">Read <i class="fa-solid fa-arrow-right"></i></a></td>
+                </tr>
+                <tr>
+                  <td data-label="Article"><span class="art-title"><i class="fa-regular fa-file-lines"></i>Amazon CloudFront</span></td>
+                  <td data-label="Description">CDN distribution, edge caching &amp; global delivery</td>
+                  <td data-label="Read"><a class="read-link" href="https://www.notion.so/Amazon-CloudFront-295a7493c9f78062a1c6ce241313d306?source=copy_link" target="_blank" rel="noopener">Read <i class="fa-solid fa-arrow-right"></i></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+ 
+        <div class="article-subgroup">
+          <h4 class="subgroup-title">Compute &amp; Scalability</h4>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Article</th><th>Description</th><th></th></tr></thead>
+              <tbody>
+                <tr>
+                  <td data-label="Article"><span class="art-title"><i class="fa-regular fa-file-lines"></i>ALB — Load Balancers</span></td>
+                  <td data-label="Description">Application Load Balancer — traffic routing &amp; health checks</td>
+                  <td data-label="Read"><a class="read-link" href="https://www.notion.so/AWS-Load-Balancers-290a7493c9f7809d8477dc7a133b4f01?source=copy_link" target="_blank" rel="noopener">Read <i class="fa-solid fa-arrow-right"></i></a></td>
+                </tr>
+                <tr>
+                  <td data-label="Article"><span class="art-title"><i class="fa-regular fa-file-lines"></i>ASG — Auto Scaling Group</span></td>
+                  <td data-label="Description">Automatic scaling policies &amp; launch configurations</td>
+                  <td data-label="Read"><a class="read-link" href="https://www.notion.so/ASG-Auto-Scaling-group-295a7493c9f780be8f93c5c273bd21dd?source=copy_link" target="_blank" rel="noopener">Read <i class="fa-solid fa-arrow-right"></i></a></td>
+                </tr>
+                <tr>
+                  <td data-label="Article"><span class="art-title"><i class="fa-regular fa-file-lines"></i>RDS</span></td>
+                  <td data-label="Description">Relational Database Service — managed databases on AWS</td>
+                  <td data-label="Read"><a class="read-link" href="https://www.notion.so/RDS-Relational-Database-Service-2bda7493c9f78097b883ebdae42139e7?source=copy_link" target="_blank" rel="noopener">Read <i class="fa-solid fa-arrow-right"></i></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+ 
+        <div class="article-subgroup">
+          <h4 class="subgroup-title">Networking &amp; Connectivity</h4>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Article</th><th>Description</th><th></th></tr></thead>
+              <tbody>
+                <tr>
+                  <td data-label="Article"><span class="art-title"><i class="fa-regular fa-file-lines"></i>CIDR</span></td>
+                  <td data-label="Description">Classless Inter-Domain Routing — IP address allocation</td>
+                  <td data-label="Read"><a class="read-link" href="https://www.notion.so/CIDR-Classless-Inter-Domain-Routing-2a2a7493c9f780e9b36cf8bf49761f83?source=copy_link" target="_blank" rel="noopener">Read <i class="fa-solid fa-arrow-right"></i></a></td>
+                </tr>
+                <tr>
+                  <td data-label="Article"><span class="art-title"><i class="fa-regular fa-file-lines"></i>VPC</span></td>
+                  <td data-label="Description">Virtual Private Cloud — isolated network environments</td>
+                  <td data-label="Read"><a class="read-link" href="https://www.notion.so/VPC-Virtual-Private-Cloud-2a1a7493c9f780a8a76eca8eaa71cd18?source=copy_link" target="_blank" rel="noopener">Read <i class="fa-solid fa-arrow-right"></i></a></td>
+                </tr>
+                <tr>
+                  <td data-label="Article"><span class="art-title"><i class="fa-regular fa-file-lines"></i>VPC Peering</span></td>
+                  <td data-label="Description">Connecting VPCs for private inter-network communication</td>
+                  <td data-label="Read"><a class="read-link" href="https://www.notion.so/VPC-Peering-2aca7493c9f780929868eb93fb87dbef?source=copy_link" target="_blank" rel="noopener">Read <i class="fa-solid fa-arrow-right"></i></a></td>
+                </tr>
+                <tr>
+                  <td data-label="Article"><span class="art-title"><i class="fa-regular fa-file-lines"></i>Transit Gateway</span></td>
+                  <td data-label="Description">Centralized hub for connecting multiple VPCs &amp; networks</td>
+                  <td data-label="Read"><a class="read-link" href="https://www.notion.so/Transit-Gateway-TGW-2aea7493c9f780b587eef5547e35593e?source=copy_link" target="_blank" rel="noopener">Read <i class="fa-solid fa-arrow-right"></i></a></td>
+                </tr>
+                <tr>
+                  <td data-label="Article"><span class="art-title"><i class="fa-regular fa-file-lines"></i>Route 53</span></td>
+                  <td data-label="Description">Scalable DNS &amp; domain routing service</td>
+                  <td data-label="Read"><a class="read-link" href="https://www.notion.so/Route-53-2b6a7493c9f780cd9d35f39568532c3b?source=copy_link" target="_blank" rel="noopener">Read <i class="fa-solid fa-arrow-right"></i></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- More Notes -->
+      <div class="article-group">
+        <h3 class="group-title"><i class="fa-solid fa-note-sticky"></i> More Notes</h3>
+        <div class="notes-list">
+          <a class="note-link" href="https://steadfast-polyanthus-bde.notion.site/firewall-39ea7493c9f780e0aee6f8529d8ca790?pvs=143" target="_blank" rel="noopener">
+            <i class="fa-solid fa-shield-halved"></i> Firewall <i class="fa-solid fa-arrow-up-right-from-square note-ext"></i>
+          </a>
+          <a class="note-link" href="https://steadfast-polyanthus-bde.notion.site/Setting-up-the-osrm-server-on-docker-3b6a7493c9f780308794dd28d410eb84?pvs=143" target="_blank" rel="noopener">
+            <i class="fa-solid fa-route"></i> Setting Up an OSRM Server on Docker <i class="fa-solid fa-arrow-up-right-from-square note-ext"></i>
+          </a>
+          <a class="note-link" href="https://steadfast-polyanthus-bde.notion.site/Docker-layer-331a7493c9f780399a69e9ec37c02205?pvs=143" target="_blank" rel="noopener">
+            <i class="fa-brands fa-docker"></i> Docker Layers <i class="fa-solid fa-arrow-up-right-from-square note-ext"></i>
+          </a>
+        </div>
+      </div>
+ 
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="section" id="videos">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="prompt">05</span> — Video</span>
+      <h2>Videos</h2>
+      <p>AWS in Nepali — a beginner-friendly cloud computing series.</p>
+    </div>
+ 
+    <div class="video-row reveal">
+ 
+      <!-- LEFT: live playlist embed, always shows the current videos -->
+      <div class="card video-embed-card">
+        <div class="video-embed-head">
+          <span class="playlist-tag"><i class="fa-brands fa-youtube"></i> AWS in Nepali · 7 videos</span>
+          <h4>Latest from the playlist</h4>
+          <p>Learn, build, and deploy on AWS — explained in Nepali, from the ground up.</p>
+        </div>
+        <div class="video-embed-frame">
+          <iframe
+            src="https://www.youtube.com/embed/videoseries?list=PLeiuvPqC-op8"
+            title="AWS in Nepali playlist"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+ 
+      <!-- RIGHT: channel card -->
+      <div class="card channel-card">
+        <div class="channel-avatar"><i class="fa-brands fa-youtube"></i></div>
+        <div class="channel-name">
+          <h4>Flow_with_twins</h4>
+          <span class="channel-handle">@Flow_with_twins</span>
+        </div>
+        <div class="channel-stats">
+          <span><i class="fa-solid fa-users"></i> 8 subscribers</span>
+          <span><i class="fa-solid fa-video"></i> 11 videos</span>
+        </div>
+        <p class="channel-desc">Hey everyone, we are Twins — welcome to our YouTube channel. Sharing AWS &amp; cloud tutorials in Nepali, made for beginners.</p>
+        <a class="btn btn-primary" href="https://www.youtube.com/@Flow_with_twins" target="_blank" rel="noopener" style="width:100%;">
+          <i class="fa-brands fa-youtube"></i> Visit Channel
+        </a>
+        <a class="btn btn-ghost" href="https://youtube.com/playlist?list=PLeiuvPqC-op8" target="_blank" rel="noopener" style="width:100%;">
+          <i class="fa-solid fa-list"></i> View Full Playlist
+        </a>
+      </div>
+ 
+    </div>
+  </div>
+</section>
+
+<!-- TECHNICAL SKILLS -->
+<section class="section alt" id="skills">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="prompt">06</span> — Stack</span>
+      <h2>Technical Skills</h2>
+      <p>Tools and technologies I work with regularly.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card skill-cat reveal">
+        <div class="cathead"><i class="fa-solid fa-code"></i><h4>Programming &amp; Development</h4></div>
+        <div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">Django</span><span class="skill-tag">PHP</span><span class="skill-tag">Java</span><span class="skill-tag">C</span><span class="skill-tag">C++</span></div>
+      </div>
+      <div class="card skill-cat reveal">
+        <div class="cathead"><i class="fa-solid fa-window-maximize"></i><h4>Frontend</h4></div>
+        <div class="skill-tags"><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">Tailwind CSS</span></div>
+      </div>
+      <div class="card skill-cat reveal">
+        <div class="cathead"><i class="fa-solid fa-brain"></i><h4>AI / Machine Learning</h4></div>
+        <div class="skill-tags"><span class="skill-tag">AI</span><span class="skill-tag">Machine Learning</span><span class="skill-tag">Data Science</span></div>
+      </div>
+      <div class="card skill-cat reveal">
+        <div class="cathead"><i class="fa-brands fa-aws"></i><h4>Cloud &amp; DevOps</h4></div>
+        <div class="skill-tags"><span class="skill-tag">AWS</span><span class="skill-tag">Docker</span><span class="skill-tag">Linux</span><span class="skill-tag">Git</span></div>
+      </div>
+      <div class="card skill-cat reveal">
+        <div class="cathead"><i class="fa-solid fa-database"></i><h4>Databases</h4></div>
+        <div class="skill-tags"><span class="skill-tag">PostgreSQL</span><span class="skill-tag">MySQL</span><span class="skill-tag">Redis</span></div>
+      </div>
+      <div class="card skill-cat reveal">
+        <div class="cathead"><i class="fa-solid fa-diagram-project"></i><h4>Messaging / Infrastructure</h4></div>
+        <div class="skill-tags"><span class="skill-tag">RabbitMQ</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOFT SKILLS -->
+<section class="section" id="soft">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="prompt">07</span> — Beyond Code</span>
+      <h2>Professional &amp; Soft Skills</h2>
+      <p>The non-technical side of getting things done.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card soft-card reveal"><i class="fa-solid fa-chalkboard-user"></i><h4>Teaching</h4><p>Enjoy explaining technical concepts and helping others learn.</p></div>
+      <div class="card soft-card reveal"><i class="fa-solid fa-comments"></i><h4>Communication</h4><p>Clear communication of technical ideas and project requirements.</p></div>
+      <div class="card soft-card reveal"><i class="fa-solid fa-people-group"></i><h4>Teamwork</h4><p>Collaborative by default — comfortable in cross-functional teams.</p></div>
+      <div class="card soft-card reveal"><i class="fa-solid fa-rocket"></i><h4>Start-up Leadership</h4><p>Comfortable owning ambiguity and moving fast with small teams.</p></div>
+      <div class="card soft-card reveal"><i class="fa-solid fa-sitemap"></i><h4>Systems Design</h4><p>Thinks in terms of trade-offs, scale, and long-term maintainability.</p></div>
+      <div class="card soft-card reveal"><i class="fa-solid fa-list-check"></i><h4>Project Management</h4><p>Keeps scope honest and ships in small, working increments.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section alt" id="education">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="prompt">08</span> — Background</span>
+      <h2>Education</h2>
+      <p>Where the fundamentals came from.</p>
+    </div>
+    <div class="card edu-card reveal">
+      <div class="edu-visual"><i class="fa-solid fa-graduation-cap"></i></div>
+      <div class="edu-content">
+        <div class="period">2021 — 2024</div>
+        <h3>Nepal Banepa Polytechnic</h3>
+        <p class="degree">Diploma in Information Technology (IT)</p>
+        <p class="desc">A three-year diploma program covering the foundations of programming, networking, and systems — the base this entire stack was built on.</p>
+        <div class="edu-grid">
+          <div>
+            <h5>Major Subjects</h5>
+            <ul><li>Programming Fundamentals</li><li>Database Management</li><li>Computer Networks</li></ul>
+          </div>
+          <div>
+            <h5>Activities</h5>
+            <ul><li>Coding club member</li><li>Inter-college hackathon team</li><li>Peer tutoring in programming</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<section class="section" id="social">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="prompt">09</span> — Elsewhere</span>
+      <h2>Connect With Me</h2>
+      <p>Find me across the web.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card social-card reveal"><div class="sicon"><i class="fa-brands fa-linkedin-in"></i></div><div><h4>LinkedIn</h4><p>Professional updates &amp; network.</p><a class="visit" href="#">Visit profile <i class="fa-solid fa-arrow-right"></i></a></div></div>
+      <div class="card social-card reveal"><div class="sicon"><i class="fa-brands fa-github"></i></div><div><h4>GitHub</h4><p>Code, docs &amp; open-source work.</p><a class="visit" href="#">Visit profile <i class="fa-solid fa-arrow-right"></i></a></div></div>
+      <div class="card social-card reveal"><div class="sicon"><i class="fa-brands fa-facebook-f"></i></div><div><h4>Facebook</h4><p>Occasional updates &amp; community.</p><a class="visit" href="#">Visit profile <i class="fa-solid fa-arrow-right"></i></a></div></div>
+      <div class="card social-card reveal"><div class="sicon"><i class="fa-brands fa-instagram"></i></div><div><h4>Instagram</h4><p>Behind the scenes &amp; life updates.</p><a class="visit" href="#">Visit profile <i class="fa-solid fa-arrow-right"></i></a></div></div>
+      <div class="card social-card reveal"><div class="sicon"><i class="fa-brands fa-x-twitter"></i></div><div><h4>Twitter / X</h4><p>Threads on dev &amp; cloud topics.</p><a class="visit" href="#">Visit profile <i class="fa-solid fa-arrow-right"></i></a></div></div>
+      <div class="card social-card reveal"><div class="sicon"><i class="fa-brands fa-youtube"></i></div><div><h4>YouTube</h4><p>Tutorials &amp; project walkthroughs.</p><a class="visit" href="#">Visit channel <i class="fa-solid fa-arrow-right"></i></a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section alt" id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="prompt">10</span> — Get in touch</span>
+      <h2>Let's Build Something Together</h2>
+      <p>Open to full-time roles, freelance work, and interesting collaborations.</p>
+    </div>
+    <div class="contact-wrap reveal">
+      <div class="card contact-side">
+        <div class="cline"><i class="fa-solid fa-envelope"></i><span>hello@kushkarki.dev</span></div>
+        <div class="cline"><i class="fa-solid fa-phone"></i><span>+977 98-XXXXXXXX</span></div>
+        <div class="cline"><i class="fa-solid fa-location-dot"></i><span>Kathmandu, Bagmati, Nepal</span></div>
+        <div class="cline"><i class="fa-regular fa-clock"></i><span>Usually replies within 24 hrs</span></div>
+        <div class="mini-social">
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="card form-card">
+        <div class="form-row">
+          <div class="field"><label>Name</label><input type="text" placeholder="Your name"></div>
+          <div class="field"><label>Email</label><input type="email" placeholder="you@example.com"></div>
+        </div>
+        <div class="field"><label>Subject</label><input type="text" placeholder="What's this about?"></div>
+        <div class="field"><label>Message</label><textarea placeholder="Tell me a bit about the project or role..."></textarea></div>
+        <button class="btn btn-primary" style="width:100%;padding:13px;">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="#home" class="logo"><span class="dot"></span>kush.karki</a>
+        <p>Backend &amp; DevOps engineer building reliable systems, one deploy at a time.</p>
+      </div>
+      <nav class="foot-nav">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#events">Events</a>
+        <a href="#articles">Articles</a><a href="#videos">Videos</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Kush Karki. Built with care in Kathmandu.</p>
+      <div class="foot-social">
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="backtotop" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal-img"><img id="modalImg" src="" alt=""></div>
+    <div class="modal-body">
+      <div class="event-meta" id="modalMeta"></div>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+// THEME TOGGLE
+const themeBtn = document.getElementById('themeToggle');
+themeBtn.addEventListener('click', ()=>{
+  document.documentElement.classList.toggle('light');
+  const icon = themeBtn.querySelector('i');
+  icon.className = document.documentElement.classList.contains('light') ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+});
+
+// NAV scroll state + progress bar
+const nav = document.getElementById('mainNav');
+const progress = document.getElementById('progress');
+const backtotop = document.getElementById('backtotop');
+window.addEventListener('scroll', ()=>{
+  nav.classList.toggle('scrolled', window.scrollY > 30);
+  const h = document.documentElement;
+  const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+  progress.style.width = scrolled + '%';
+  backtotop.classList.toggle('show', window.scrollY > 500);
+});
+backtotop.addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+// MOBILE MENU
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+hamburger.addEventListener('click', ()=>navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>navLinks.classList.remove('open')));
+
+// SCROLL REVEAL
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:0.12});
+revealEls.forEach(el=>io.observe(el));
+
+// READ MORE
+document.getElementById('readMoreBtn').addEventListener('click', function(){
+  const more = document.getElementById('moreAbout');
+  more.classList.toggle('open');
+  this.innerHTML = more.classList.contains('open') ? 'Read less <i class="fa-solid fa-chevron-up"></i>' : 'Read more <i class="fa-solid fa-chevron-down"></i>';
+});
+
+// PROJECT FILTER
+const pills = document.querySelectorAll('.filter-pill');
+const projCards = document.querySelectorAll('#projectGrid .proj-card');
+pills.forEach(p=>p.addEventListener('click', ()=>{
+  pills.forEach(x=>x.classList.remove('active'));
+  p.classList.add('active');
+  const f = p.dataset.filter;
+  projCards.forEach(c=>{
+    const show = f==='all' || c.dataset.tags.includes(f);
+    c.style.display = show ? '' : 'none';
+  });
+}));
+
+// ARTICLE SEARCH
+document.getElementById('articleSearch').addEventListener('input', function(){
+  const q = this.value.toLowerCase();
+  document.querySelectorAll('#articleTable tbody tr').forEach(row=>{
+    row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
+  });
+});
+
+// EVENT MODAL
+function openModal(el){
+  document.getElementById('modalImg').src = el.dataset.img;
+  document.getElementById('modalTitle').textContent = el.dataset.title;
+  document.getElementById('modalMeta').innerHTML = `<span><i class="fa-regular fa-calendar"></i> ${el.dataset.meta}</span>`;
+  document.getElementById('modalDesc').textContent = el.dataset.desc;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+function closeModal(){ document.getElementById('modalOverlay').classList.remove('open'); }
+document.getElementById('modalOverlay').addEventListener('click', function(e){ if(e.target===this) closeModal(); });
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
+</script>
+</body>
+</html>
