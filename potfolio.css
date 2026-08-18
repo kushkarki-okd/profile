@@ -1,4 +1,3 @@
-
 :root {
   /* surfaces */
   --bg: #0a0e17;
@@ -208,7 +207,7 @@ h1, h2, h3, h4 {
 }
  
  
-nav {
+#mainNav {
   position: fixed;
   top: 0;
   left: 0;
@@ -219,7 +218,7 @@ nav {
   border-bottom: 2px solid transparent;
 }
  
-nav.scrolled {
+#mainNav.scrolled {
   background: color-mix(in srgb, var(--bg) 78%, transparent);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -527,9 +526,6 @@ nav.scrolled {
   background: var(--bg-card-hover);
 }
 
-/* --------------------------------------------------------------------------
-   9. ABOUT SECTION
-   -------------------------------------------------------------------------- */
 
 .about-card {
   padding: 44px;
@@ -599,9 +595,6 @@ nav.scrolled {
 }
 
 
-/* --------------------------------------------------------------------------
-   10. GRID SYSTEMS
-   -------------------------------------------------------------------------- */
 
 .grid-2 {
   display: grid;
@@ -621,10 +614,6 @@ nav.scrolled {
   gap: 20px;
 }
 
-
-/* --------------------------------------------------------------------------
-   11. FILTER PILLS
-   -------------------------------------------------------------------------- */
 
 .filter-row {
   display: flex;
@@ -652,9 +641,6 @@ nav.scrolled {
 }
 
 
-/* --------------------------------------------------------------------------
-   12. PROJECT CARDS
-   -------------------------------------------------------------------------- */
 
 .proj-card {
   overflow: hidden;
@@ -763,10 +749,7 @@ nav.scrolled {
 }
 
 
-/* --------------------------------------------------------------------------
-   13. EVENT CARDS
-   -------------------------------------------------------------------------- */
-event-card {
+.event-card {
   cursor: pointer;
   overflow: hidden;
 }
@@ -826,14 +809,12 @@ event-card {
 }
 
 
-/* --------------------------------------------------------------------------
-   14. ARTICLES TABLE
-   -------------------------------------------------------------------------- */
 .table-wrap {
   background: var(--bg-card);
   border: 2px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
+  overflow-x: auto;
 }
  
 .search-bar {
@@ -1011,9 +992,6 @@ tbody tr:hover {
   transform: translateX(4px);
 }
 
-/* --------------------------------------------------------------------------
-   15. VIDEO CARDS
-   -------------------------------------------------------------------------- */
 
 .video-row {
   display: grid;
@@ -1126,12 +1104,10 @@ tbody tr:hover {
  
 .channel-card .btn {
   justify-content: center;
+  width: 100%;
 }
  
 
-/* --------------------------------------------------------------------------
-   16. TECHNICAL SKILLS
-   -------------------------------------------------------------------------- */
 
 .skill-cat {
   padding: 26px;
@@ -1177,9 +1153,6 @@ tbody tr:hover {
 }
 
 
-/* --------------------------------------------------------------------------
-   17. SOFT SKILLS
-   -------------------------------------------------------------------------- */
 
 .soft-card {
   padding: 26px;
@@ -1203,68 +1176,66 @@ tbody tr:hover {
 }
 
 
-/* --------------------------------------------------------------------------
-   18. EDUCATION
-   -------------------------------------------------------------------------- */
 
 .edu-card {
   display: grid;
   grid-template-columns: 0.85fr 1.4fr;
   overflow: hidden;
 }
-
+ 
 .edu-visual {
+  position: relative;
   background:
     radial-gradient(circle at 30% 30%, rgba(34, 211, 238, 0.28), transparent 55%),
     linear-gradient(160deg, #0d1424, #101a30);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
   min-height: 220px;
   border-right: 2px solid var(--border);
+  overflow: hidden;
 }
-
-.edu-visual i {
-  font-size: 64px;
-  color: var(--accent-2);
-  opacity: 0.85;
+ 
+.edu-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
-
+ 
 .edu-content {
   padding: 36px;
 }
-
+ 
 .edu-content .period {
   font-family: var(--ff-mono);
   font-size: 12px;
   color: var(--accent-2);
   margin-bottom: 10px;
 }
-
+ 
 .edu-content h3 {
   font-size: 21px;
   margin-bottom: 4px;
 }
-
+ 
 .edu-content .degree {
   color: var(--text-dim);
   font-size: 14.5px;
   margin-bottom: 16px;
 }
-
+ 
 .edu-content p.desc {
   color: var(--text-mute);
   font-size: 13.5px;
   margin-bottom: 18px;
 }
-
+ 
 .edu-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
-
+ 
 .edu-grid h5 {
   font-family: var(--ff-mono);
   font-size: 11px;
@@ -1273,7 +1244,7 @@ tbody tr:hover {
   margin-bottom: 8px;
   letter-spacing: 0.04em;
 }
-
+ 
 .edu-grid li {
   font-size: 13px;
   color: var(--text-dim);
@@ -1281,7 +1252,7 @@ tbody tr:hover {
   padding-left: 14px;
   position: relative;
 }
-
+ 
 .edu-grid li::before {
   content: '';
   position: absolute;
@@ -1292,12 +1263,177 @@ tbody tr:hover {
   background: var(--accent);
   border-radius: 1px;
 }
-
-
-/* --------------------------------------------------------------------------
-   19. SOCIAL CARDS
-   -------------------------------------------------------------------------- */
-
+ 
+.section-divider {
+  height: 0;
+  border-top: 2px solid var(--border-soft);
+  margin-bottom: 56px;
+}
+ 
+.hobby-cert-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+ 
+.hobby-side {
+  padding: 32px;
+}
+ 
+.cert-side {
+  padding: 32px;
+}
+ 
+.side-title {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+ 
+.side-sub {
+  font-size: 13px;
+  color: var(--text-mute);
+  margin-bottom: 20px;
+}
+ 
+/* hobby carousel */
+.hobby-carousel {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--bg-elev);
+}
+ 
+.hobby-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s cubic-bezier(.2, .7, .2, 1);
+}
+ 
+.hobby-slide {
+  flex: 0 0 100%;
+  height: 100%;
+}
+ 
+.hobby-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ 
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(10, 14, 23, 0.65);
+  backdrop-filter: blur(6px);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+ 
+.carousel-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+ 
+.carousel-btn.prev {
+  left: 12px;
+}
+ 
+.carousel-btn.next {
+  right: 12px;
+}
+ 
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+ 
+.carousel-dots .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+ 
+.carousel-dots .dot.active {
+  background: var(--accent-2);
+  width: 20px;
+  border-radius: 4px;
+}
+ 
+/* certificates */
+.cert-list {
+  display: flex;
+  flex-direction: column;
+}
+ 
+.cert-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px 0;
+  border-bottom: 2px solid var(--border-soft);
+}
+ 
+.cert-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+ 
+.cert-item:first-child {
+  padding-top: 0;
+}
+ 
+.cert-thumb {
+  width: 64px;
+  height: 46px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid var(--border-soft);
+  flex-shrink: 0;
+}
+ 
+.cert-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ 
+.cert-info h5 {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--ff-body);
+  margin-bottom: 4px;
+}
+ 
+.cert-org {
+  display: block;
+  font-size: 12.5px;
+  color: var(--text-dim);
+  margin-bottom: 2px;
+}
+ 
+.cert-date {
+  display: block;
+  font-family: var(--ff-mono);
+  font-size: 11.5px;
+  color: var(--text-mute);
+}
 .social-card {
   padding: 24px;
   display: flex;
@@ -1339,27 +1475,24 @@ tbody tr:hover {
 }
 
 
-/* --------------------------------------------------------------------------
-   20. CONTACT
-   -------------------------------------------------------------------------- */
 
 .contact-wrap {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
   gap: 36px;
 }
-
+ 
 .contact-side {
   padding: 36px;
 }
-
+ 
 .contact-side .cline {
   display: flex;
   align-items: center;
   gap: 14px;
   margin-bottom: 18px;
 }
-
+ 
 .contact-side .cline i {
   width: 40px;
   height: 40px;
@@ -1371,18 +1504,18 @@ tbody tr:hover {
   justify-content: center;
   flex-shrink: 0;
 }
-
+ 
 .contact-side .cline span {
   font-size: 14px;
   color: var(--text-dim);
 }
-
+ 
 .mini-social {
   display: flex;
   gap: 10px;
   margin-top: 22px;
 }
-
+ 
 .mini-social a {
   width: 38px;
   height: 38px;
@@ -1394,64 +1527,52 @@ tbody tr:hover {
   color: var(--text-dim);
   transition: 0.2s ease;
 }
-
+ 
 .mini-social a:hover {
   color: #fff;
   border-color: var(--accent);
   background: var(--accent);
 }
-
-.form-card {
-  padding: 36px;
+ 
+.resume-card {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-
-.field {
-  margin-bottom: 16px;
-}
-
-.field label {
-  display: block;
-  font-size: 12.5px;
-  font-family: var(--ff-mono);
-  color: var(--text-mute);
-  margin-bottom: 7px;
-}
-
-.field input,
-.field textarea {
+ 
+.resume-thumb {
   width: 100%;
-  background: var(--bg-elev);
+  max-width: 180px;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
   border: 2px solid var(--border);
-  border-radius: 10px;
-  padding: 12px 14px;
-  color: var(--text);
-  font-size: 14px;
-  transition: 0.2s ease;
+  align-self: center;
 }
-
-.field input:focus,
-.field textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-soft);
+ 
+.resume-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }
-
-.field textarea {
-  resize: vertical;
-  min-height: 120px;
+ 
+.resume-info {
+  text-align: center;
 }
-
-
-/* --------------------------------------------------------------------------
-   21. FOOTER
-   -------------------------------------------------------------------------- */
+ 
+.resume-info h4 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+ 
+.resume-info p {
+  font-size: 13.5px;
+  color: var(--text-mute);
+  margin-bottom: 20px;
+}
+ 
 
 footer {
   border-top: 2px solid var(--border-soft);
@@ -1529,9 +1650,6 @@ footer {
 }
 
 
-/* --------------------------------------------------------------------------
-   22. BACK TO TOP BUTTON
-   -------------------------------------------------------------------------- */
 
 #backtotop {
   position: fixed;
@@ -1567,10 +1685,6 @@ footer {
 }
 
 
-/* --------------------------------------------------------------------------
-   23. MODAL
-   -------------------------------------------------------------------------- */
-
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -1602,6 +1716,9 @@ footer {
   transform: translateY(16px) scale(.98);
   transition: transform 0.3s ease;
   box-shadow: var(--shadow);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .modal-overlay.open .modal-box {
@@ -1655,9 +1772,6 @@ footer {
 }
 
 
-/* --------------------------------------------------------------------------
-   24. RESPONSIVE OVERRIDES
-   -------------------------------------------------------------------------- */
 
 /* Tablet — around 900px */
 @media (max-width: 900px) {
@@ -1683,6 +1797,7 @@ footer {
     pointer-events: none;
     transition: 0.25s ease;
     box-shadow: var(--shadow);
+    z-index: 950;
   }
 
   .navlinks.open {
@@ -1703,9 +1818,15 @@ footer {
   .cover .code-float {
     display: block;
   }
+
+  .video-row {
+    grid-template-columns: 1fr;
+  }
+  .hobby-cert-row {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* Small tablet / large mobile — around 800px */
 @media (max-width: 800px) {
   .about-card {
     grid-template-columns: 1fr;
@@ -1713,14 +1834,12 @@ footer {
   }
 }
 
-/* Mobile — around 860px (contact layout) */
 @media (max-width: 860px) {
   .contact-wrap {
     grid-template-columns: 1fr;
   }
 }
 
-/* Mobile — around 760px */
 @media (max-width: 760px) {
   .edu-card {
     grid-template-columns: 1fr;
@@ -1729,6 +1848,11 @@ footer {
   .edu-visual {
     border-right: none;
     border-bottom: 2px solid var(--border);
+  }
+
+  /* education subject/activity columns stack on small screens */
+  .edu-grid {
+    grid-template-columns: 1fr;
   }
 
   /* articles table becomes stacked cards */
@@ -1778,5 +1902,41 @@ footer {
 @media (max-width: 520px) {
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .wrap {
+    padding: 0 18px;
+  }
+
+  .cover {
+    height: 220px;
+  }
+
+  .profile-block {
+    margin-top: -48px;
+  }
+
+  .avatar {
+    width: 110px;
+    height: 110px;
+    border-width: 4px;
+  }
+
+  .locline {
+    gap: 10px;
+    font-size: 12.5px;
+  }
+
+  .about-card,
+  .edu-content,
+  .hobby-side,
+  .cert-side,
+  .contact-side,
+  .resume-card {
+    padding: 20px;
+  }
+
+  .proj-actions {
+    flex-direction: column;
   }
 }
